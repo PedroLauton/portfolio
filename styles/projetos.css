@@ -24,9 +24,6 @@
     max-width: 400px;
     margin: 0.5rem;
 }
-.container__conteudo__projetos__card.slide-show {
-    display: flex;
-}
 .container__conteudo__projetos__card__titulo{
     font-weight: 600;
     font-size: 1.8rem;
@@ -65,6 +62,7 @@
     height: auto;
     top: 50%;
     display: none;
+    cursor: pointer;
 }
 .container__conteudo__projetos__indicadores {
     display: none;

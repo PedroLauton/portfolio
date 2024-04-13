@@ -20,6 +20,7 @@
 }
 .container__conteudo__informacoes__sobre__texto{
     margin: 1.4rem 0;
+    font-size: 1rem;
 }
 .container__conteudo__informacoes__sobre__centralizar{
     display: flex;

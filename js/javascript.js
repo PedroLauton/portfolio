@@ -2,7 +2,6 @@ document.addEventListener('DOMContentLoaded', function() {
     const slides = document.querySelectorAll('.container__conteudo__projetos__card');
     const indicadoresContainer = document.querySelector('.container__conteudo__projetos__indicadores');
     let currentSlide = 0;
-
     // Função para mostrar o slide atual
     const showSlide = (index) => {
         slides.forEach((slide) => {
@@ -10,21 +9,18 @@ document.addEventListener('DOMContentLoaded', function() {
         });
         slides[index].style.display = 'flex';
     };
-
     // Função para avançar para o próximo slide
     const nextSlide = () => {
         currentSlide = (currentSlide + 1) % slides.length;
         updateIndicadores();
         showSlide(currentSlide);
     };
-
     // Função para voltar para o slide anterior
     const prevSlide = () => {
         currentSlide = (currentSlide - 1 + slides.length) % slides.length;
         updateIndicadores();
         showSlide(currentSlide);
     };
-
     // Atualizar os indicadores de slide
     const updateIndicadores = () => {
         indicadoresContainer.innerHTML = ''; // Limpar os indicadores
@@ -42,13 +38,10 @@ document.addEventListener('DOMContentLoaded', function() {
             indicadoresContainer.appendChild(indicador);
         });
     };
-
     // Evento de clique na seta da direita
     document.querySelector('.seta-direita').addEventListener('click', nextSlide);
-
     // Evento de clique na seta da esquerda
     document.querySelector('.seta-esquerda').addEventListener('click', prevSlide);
-
     // Exibir todos os slides quando a tela for menor que 768px
     const mediaQuery = window.matchMedia('(max-width: 767px)');
     const handleResize = () => {
@@ -60,10 +53,8 @@ document.addEventListener('DOMContentLoaded', function() {
             showSlide(currentSlide);
         }
     };
-
     handleResize(); // Executar quando a página carregar
     mediaQuery.addListener(handleResize); // Executar quando a tela for redimensionada
-
     // Inicializar os indicadores de slide
     updateIndicadores();
 });
