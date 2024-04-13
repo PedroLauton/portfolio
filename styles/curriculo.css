@@ -23,10 +23,6 @@
     font-weight: 700;
     transition: transform 0.3s ease;
 }
-.container__conteudo__curriculo__centralizar__download:hover{
-    transform: scale(1.1);
-    background-color: var(--cor-terciaria-fundo);
-}
 .container__conteudo__curriculo__centralizar__download__icone{
     width: 2rem;
     margin-right: 10px;
@@ -37,5 +33,9 @@
         background-color: var(--cor-principal-fundo);
         border: 1px solid var(--cor-principal-objetos);
         border-radius: 8px;
+    }
+    .container__conteudo__curriculo__centralizar__download:hover{
+        transform: scale(1.1);
+        background-color: var(--cor-terciaria-fundo);
     }
 }
