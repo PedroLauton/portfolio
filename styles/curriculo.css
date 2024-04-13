@@ -13,14 +13,11 @@
     display: inline-block;   
 }
 .container__conteudo__curriculo__centralizar__download{
-    background-color: var(--cor-principal-fundo);
     display: flex;
     align-items: center;
     justify-content: center;
     padding: 0.9rem;
     margin: 2rem 1rem 1rem 1rem;
-    border: 1px solid var(--cor-principal-objetos);
-    border-radius: 8px;
     text-decoration: none;
     color: var(--cor-fonte);
     font-weight: 700;
@@ -33,4 +30,12 @@
 .container__conteudo__curriculo__centralizar__download__icone{
     width: 2rem;
     margin-right: 10px;
+}
+
+@media screen and (min-width:768px) {
+    .container__conteudo__curriculo__centralizar__download{
+        background-color: var(--cor-principal-fundo);
+        border: 1px solid var(--cor-principal-objetos);
+        border-radius: 8px;
+    }
 }
