@@ -1,0 +1,36 @@
+.container__conteudo.quintuplo{
+    display: flex;
+    justify-content: center;
+    background-color: var(--cor-secundaria-fundo);
+}
+.container__conteudo__curriculo_titulo{
+    font-size: 2rem;
+    font-weight: 700;
+    margin: 1rem 0 0 0;
+    color: var(--cor-fonte);
+}
+.container__conteudo__curriculo__centralizar{
+    display: inline-block;   
+}
+.container__conteudo__curriculo__centralizar__download{
+    background-color: var(--cor-principal-fundo);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.9rem;
+    margin: 2rem 1rem 1rem 1rem;
+    border: 1px solid var(--cor-principal-objetos);
+    border-radius: 8px;
+    text-decoration: none;
+    color: var(--cor-fonte);
+    font-weight: 700;
+    transition: transform 0.3s ease;
+}
+.container__conteudo__curriculo__centralizar__download:hover{
+    transform: scale(1.1);
+    background-color: var(--cor-terciaria-fundo);
+}
+.container__conteudo__curriculo__centralizar__download__icone{
+    width: 2rem;
+    margin-right: 10px;
+}

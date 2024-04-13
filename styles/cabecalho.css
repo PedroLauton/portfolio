@@ -1,0 +1,88 @@
+.cabecalho{
+    background-color: var(--cor-principal-objetos);
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+}
+.cabecalho__conteudo{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 3rem;
+    position: relative;
+}
+.cabecalho__conteudo__titulo{
+    color: var(--cor-base);
+    font-size: 1.6rem;
+    font-weight: 600;
+    padding-right: 15px;
+}
+.cabecalho__conteudo__link{
+    display: none;
+}
+.cabecalho__conteudo__checkbox{
+    display: none;
+}
+.cabecalho__conteudo__label{
+    display: flex;
+    align-items: center;
+}
+.cabecalho__conteudo__label__menu{
+    background-image: url(../images/menu_fechado.svg);
+    width: 2rem;
+    height: 2rem;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.cabecalho__conteudo__menu{
+    position: absolute;
+    background-color: var(--cor-principal-objetos);
+    padding: 0.5rem;
+    display: none;
+    top: 100%;
+    right: 1.3rem;
+}
+.cabecalho__conteudo__menu__lista{
+    text-align: center;
+}
+.cabecalho__conteudo__menu__lista__item{
+    list-style-type: none;
+    padding: 0.3rem 0;
+}
+.cabecalho__menu__lista__item__links{
+    text-decoration: none;
+    color: var(--cor-base);
+}
+.cabecalho__conteudo__checkbox:checked~.cabecalho__conteudo__menu{
+    display: block;
+}
+.cabecalho__conteudo__checkbox:checked~.cabecalho__conteudo__label>.cabecalho__conteudo__label__menu{
+    background-image: url(../images/menu_aberto.svg);
+}
+#link__sobre{
+    color: var(--cor-fonte);
+}
+
+@media screen and (min-width:768px){
+    .cabecalho__conteudo__link{
+        display: block;
+    }
+    .cabecalho__conteudo__link__lista{
+        display: flex;
+        flex-direction: row;
+    
+    }
+    .cabecalho__conteudo__link__lista__item{
+        padding: 0 1rem 0 1rem;
+        list-style-type: none;
+        color: var(--cor-base);
+        font-weight: 500;
+        font-size: 1.2rem;
+        text-decoration: none;
+    }
+    .cabecalho__conteudo__label{
+        display: none;
+    }
+}
+
+

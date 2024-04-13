@@ -1,0 +1,14 @@
+.container__conteudo.secundario{
+    background-color: var(--cor-principal-fundo);
+}
+.container__conteudo__cursando__imagem{
+    width: 5rem;
+    margin: 1rem 0;
+}
+.container__conteudo__cursando__titulo{
+    font-size: 1.5rem;
+    color: var(--cor-fonte);
+}
+.container__conteudo__cursando__texto{
+    padding: 0.5rem 0;
+}
