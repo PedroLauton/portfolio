@@ -2,7 +2,7 @@
 
 Bem-vindo ao meu repositório! Aqui você encontrará uma seleção dos meus principais projetos, bem como informações de contato.
 
-##Link do repositório
+## Link do repositório
 
 https://pedrolauton.github.io/portfolio/
 
