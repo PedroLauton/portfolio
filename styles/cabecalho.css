@@ -48,6 +48,7 @@
 .cabecalho__conteudo__menu__lista__item{
     list-style-type: none;
     padding: 0.3rem 0;
+    font-weight: 500;
 }
 .cabecalho__menu__lista__item__links{
     text-decoration: none;

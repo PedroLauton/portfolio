@@ -14,6 +14,8 @@
     --cor-principal-fundo: #d8d8c0 ;
     --cor-secundaria-fundo: #f0f0d8;
     --cor-terciaria-fundo: #e6e6d1;
+    --cor-quaternaria-fundo: gray;
+    --cor-quaternaria-borda:rgb(83, 83, 83); 
     --cor-base: #ffffff;
 }
 *{
