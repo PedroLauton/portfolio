@@ -52,7 +52,7 @@
     .container__conteudo.primario{
         margin-bottom: 1rem;
     }
-    .container__conteudo__titulo{
+    .container__conteudo__titulo.sobre{
         display: none;
     }
     .container__conteudo__informacoes{
