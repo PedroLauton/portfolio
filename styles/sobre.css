@@ -71,11 +71,12 @@
     .container__conteudo__informacoes__sobre__titulo{
         display: block;
     }
+    .container__conteudo__informacoes__sobre__centralizar{
+        margin-top: 2rem;
+    }
     .container__conteudo__informacoes__sobre__centralizar__links{
-        background-color: var(--cor-principal-fundo);
         display: flex;
         align-items: center;
-        border: 1px solid var(--cor-principal-objetos);
         border-radius: 8px;
         text-decoration: none;
         color: var(--cor-fonte);
@@ -83,7 +84,6 @@
     }
     .container__conteudo__informacoes__sobre__centralizar__links:hover{
         transform: scale(1.1);
-        background-color: var(--cor-terciaria-fundo);
     }
     .container__conteudo__informacoes__sobre__centralizar__links__imagem{
         margin-right: 10px;

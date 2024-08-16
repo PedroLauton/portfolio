@@ -70,12 +70,10 @@
     margin: 1rem;
 }
 .container__conteudo__projetos__card__link{
-    background-color: var(--cor-principal-fundo);
     display: flex;
     align-items: center;
     padding: 0.7rem;
     margin: 1rem 0 2rem 0;
-    border: 1px solid var(--cor-principal-objetos);
     border-radius: 8px;
     text-decoration: none;
     color: var(--cor-fonte);
@@ -84,7 +82,6 @@
 }
 .container__conteudo__projetos__card__link:hover{
     transform: scale(1.1);
-    background-color: var(--cor-terciaria-fundo);
 }
 .container__conteudo__projetos__card__link__icone{
     width: 2rem;
@@ -156,10 +153,18 @@
         left: 13%;
         transform: scaleX(-1);
         margin: 0 2rem;
+        transition: transform 0.3s ease; 
     }
     .container__conteudo__seta.seta-direita{
         right: 20%;
         margin: 0 2rem;
+        transition: transform 0.3s ease; 
+    }
+    .container__conteudo__seta.seta-esquerda:hover{
+        transform: scaleX(-1) scale(1.1);
+    }
+    .container__conteudo__seta.seta-direita:hover{
+        transform: scale(1.1);
     }
     .container__conteudo__projetos__indicadores {
         display: flex;
