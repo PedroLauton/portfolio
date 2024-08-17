@@ -58,3 +58,33 @@ document.addEventListener('DOMContentLoaded', function() {
     // Inicializar os indicadores de slide
     updateIndicadores();
 });
+
+document.addEventListener("DOMContentLoaded", function() {
+    const links = document.querySelectorAll('.cabecalho__menu__lista__item__links');
+
+    links.forEach(link => {
+        link.addEventListener('click', function() {
+            // Remove a classe 'active' de todos os links
+            links.forEach(l => l.classList.remove('active'));
+            links.forEach(l => l.classList.remove('sobre'));
+
+            // Adiciona a classe 'active' ao link clicado
+            this.classList.add('active');
+        });
+    });
+});
+
+document.addEventListener("DOMContentLoaded", function() {
+    const links = document.querySelectorAll('.cabecalho__conteudo__link__lista__item');
+
+    links.forEach(link => {
+        link.addEventListener('click', function() {
+            // Remove a classe 'active' de todos os links
+            links.forEach(l => l.classList.remove('active'));
+            links.forEach(l => l.classList.remove('sobre'));
+
+            // Adiciona a classe 'active' ao link clicado
+            this.classList.add('active');
+        });
+    });
+});

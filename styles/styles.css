@@ -11,10 +11,12 @@
 :root{
     --cor-fonte: #333333;
     --cor-principal-objetos: #1693a5;
+    --cor-secundaria-objetos: #117d8d;
+    --cor-terciaria-objetos: #116b79;
     --cor-principal-fundo: #d8d8c0 ;
     --cor-secundaria-fundo: #f0f0d8;
     --cor-terciaria-fundo: #e6e6d1;
-    --cor-quaternaria-fundo: gray;
+    --cor-quaternaria-fundo: #808080;
     --cor-quaternaria-borda:rgb(83, 83, 83); 
     --cor-base: #ffffff;
 }
@@ -26,4 +28,3 @@
     font-family: 'Poppins', sans-serif;
     font-size: 1rem;
 }
-

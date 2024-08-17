@@ -126,6 +126,8 @@
         border: 2px solid var(--cor-principal-objetos);
         border-radius: 10px;
         max-width: 25rem;
+        transition: transform 0.3s ease, opacity 0.3s ease;
+        opacity: 1;
     }
     .container__conteudo__projetos__card__exibir{
         display: none;

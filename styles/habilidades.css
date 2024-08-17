@@ -1,5 +1,6 @@
 .container__conteudo.terciario{
     background-color: var(--cor-secundaria-fundo);
+    background-image: url(../images/enfeites_1.png);
     padding-bottom: 1rem;
 }
 .container__conteudo__habilidades{
