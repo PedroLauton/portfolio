@@ -121,6 +121,11 @@
 }
 
 @media screen and (min-width:768px){
+    .container__conteudo__projetos{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+    }
     .container__conteudo__projetos__card{
         padding: 1rem;
         border: 2px solid var(--cor-principal-objetos);
@@ -128,6 +133,7 @@
         max-width: 25rem;
         transition: transform 0.3s ease, opacity 0.3s ease;
         opacity: 1;
+        box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.5);
     }
     .container__conteudo__projetos__card__exibir{
         display: none;

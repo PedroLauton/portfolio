@@ -8,6 +8,7 @@
 }
 .container__conteudo.primario{
     background-image: url(../images/enfeites_1.png);
+    background-size: cover;
 }
 .container__conteudo__titulo, .container__conteudo__informacoes__sobre__titulo{
     font-size: 2rem;
