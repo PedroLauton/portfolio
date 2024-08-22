@@ -57,7 +57,6 @@
     text-decoration: none;
     color: var(--cor-base);
 }
-
 .cabecalho__menu__lista__item__links.sobre{
     color: var(--cor-fonte);
 }
@@ -86,12 +85,16 @@
         font-weight: 500;
         font-size: 1.2rem;
         text-decoration: none;
+        transition: transform 0.2s ease-in-out;
     }
     .cabecalho__conteudo__link__lista__item.sobre{
         color: var(--cor-fonte);       
     }
     .cabecalho__conteudo__link__lista__item.active{
         color: var(--cor-fonte); 
+    }
+    .cabecalho__conteudo__link__lista__item:hover{
+        transform: scale(1.03);    
     }
     .cabecalho__conteudo__label{
         display: none;

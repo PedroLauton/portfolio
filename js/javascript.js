@@ -2,26 +2,52 @@ document.addEventListener('DOMContentLoaded', function() {
     const slides = document.querySelectorAll('.container__conteudo__projetos__card');
     const indicadoresContainer = document.querySelector('.container__conteudo__projetos__indicadores');
     let currentSlide = 0;
-    // Função para mostrar o slide atual
+
+    // Função para mostrar apenas o slide principal para telas menores que 1440px
     const showSlide = (index) => {
         slides.forEach((slide) => {
             slide.style.display = 'none';
+            slide.classList.remove('tranform'); // Remove a classe 'tranform' de todos os slides
         });
-        slides[index].style.display = 'flex';
+
+        const prevIndex = (index - 1 + slides.length) % slides.length;
+        const nextIndex = (index + 1) % slides.length;
+
+        if (window.innerWidth >= 1440) {
+            // Mostrar três slides para telas a partir de 1440px
+            slides[prevIndex].style.display = 'flex';
+            slides[prevIndex].classList.add('tranform');
+            slides[index].style.display = 'flex';
+            slides[nextIndex].style.display = 'flex';
+            slides[nextIndex].classList.add('tranform');
+            slides[index].style.order = '2';
+            slides[prevIndex].style.order = '1';
+            slides[nextIndex].style.order = '3';
+        } else if (window.innerWidth >= 768) {
+            // Mostrar apenas o slide principal para telas entre 768px e 1439px
+            slides[index].style.display = 'flex';
+        } else {
+            // Mostrar todos os slides em ordem original para telas menores que 768px
+            slides.forEach((slide) => {
+                slide.style.display = 'flex';
+                slide.style.order = 'unset'; // Remove qualquer ordenação aplicada pelo JS
+                slide.classList.remove('tranform');
+            });
+        }
     };
-    // Função para avançar para o próximo slide
+
     const nextSlide = () => {
         currentSlide = (currentSlide + 1) % slides.length;
         updateIndicadores();
         showSlide(currentSlide);
     };
-    // Função para voltar para o slide anterior
+
     const prevSlide = () => {
         currentSlide = (currentSlide - 1 + slides.length) % slides.length;
         updateIndicadores();
         showSlide(currentSlide);
     };
-    // Atualizar os indicadores de slide
+
     const updateIndicadores = () => {
         indicadoresContainer.innerHTML = ''; // Limpar os indicadores
         slides.forEach((slide, index) => {
@@ -38,37 +64,37 @@ document.addEventListener('DOMContentLoaded', function() {
             indicadoresContainer.appendChild(indicador);
         });
     };
-    // Evento de clique na seta da direita
+
     document.querySelector('.seta-direita').addEventListener('click', nextSlide);
-    // Evento de clique na seta da esquerda
     document.querySelector('.seta-esquerda').addEventListener('click', prevSlide);
-    // Exibir todos os slides quando a tela for menor que 768px
-    const mediaQuery = window.matchMedia('(max-width: 767px)');
+
     const handleResize = () => {
-        if (mediaQuery.matches) {
+        if (window.innerWidth < 768) {
             slides.forEach((slide) => {
                 slide.style.display = 'flex';
+                slide.style.order = 'unset'; // Remove qualquer ordenação aplicada pelo JS
+                slide.classList.remove('tranform'); // Remove a classe 'tranform' de todos os slides
             });
         } else {
             showSlide(currentSlide);
         }
     };
+
     handleResize(); // Executar quando a página carregar
-    mediaQuery.addListener(handleResize); // Executar quando a tela for redimensionada
-    // Inicializar os indicadores de slide
+    window.addEventListener('resize', handleResize);
+
     updateIndicadores();
+    showSlide(currentSlide); // Mostrar o slide inicial
 });
+
 
 document.addEventListener("DOMContentLoaded", function() {
     const links = document.querySelectorAll('.cabecalho__menu__lista__item__links');
 
     links.forEach(link => {
         link.addEventListener('click', function() {
-            // Remove a classe 'active' de todos os links
             links.forEach(l => l.classList.remove('active'));
             links.forEach(l => l.classList.remove('sobre'));
-
-            // Adiciona a classe 'active' ao link clicado
             this.classList.add('active');
         });
     });
@@ -79,11 +105,8 @@ document.addEventListener("DOMContentLoaded", function() {
 
     links.forEach(link => {
         link.addEventListener('click', function() {
-            // Remove a classe 'active' de todos os links
             links.forEach(l => l.classList.remove('active'));
             links.forEach(l => l.classList.remove('sobre'));
-
-            // Adiciona a classe 'active' ao link clicado
             this.classList.add('active');
         });
     });
